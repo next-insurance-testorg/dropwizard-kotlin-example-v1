@@ -1,4 +1,4 @@
-package dropwizard.kotlin.example
+package com.github.ohbaron.dropwizardkotlinexamplev1
 
 import com.google.common.base.Strings
 import io.dropwizard.testing.ConfigOverride

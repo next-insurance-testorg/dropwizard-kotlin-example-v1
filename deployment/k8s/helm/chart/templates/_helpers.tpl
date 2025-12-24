@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "dropwizard-kotlin-example.name" -}}
+{{- define "com.github.ohbaron.dropwizardkotlinexamplev1-v1.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "dropwizard-kotlin-example.fullname" -}}
+{{- define "com.github.ohbaron.dropwizardkotlinexamplev1-v1.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "dropwizard-kotlin-example.chart" -}}
+{{- define "com.github.ohbaron.dropwizardkotlinexamplev1-v1.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "dropwizard-kotlin-example.labels" -}}
-helm.sh/chart: {{ include "dropwizard-kotlin-example.chart" . }}
-{{ include "dropwizard-kotlin-example.selectorLabels" . }}
+{{- define "com.github.ohbaron.dropwizardkotlinexamplev1-v1.labels" -}}
+helm.sh/chart: {{ include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.chart" . }}
+{{ include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "dropwizard-kotlin-example.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "dropwizard-kotlin-example.name" . }}
+{{- define "com.github.ohbaron.dropwizardkotlinexamplev1-v1.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "dropwizard-kotlin-example.serviceAccountName" -}}
+{{- define "com.github.ohbaron.dropwizardkotlinexamplev1-v1.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "dropwizard-kotlin-example.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}

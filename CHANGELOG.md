@@ -1,4 +1,4 @@
-# %NAME% Changelog
+# dropwizard-kotlin-example-v1 Changelog
 
 ## [Unreleased]
 

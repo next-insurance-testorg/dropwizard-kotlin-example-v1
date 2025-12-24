@@ -1,4 +1,4 @@
-APP_NAME:=dropwizard-kotlin-example
+APP_NAME:=com.github.ohbaron.dropwizardkotlinexamplev1-v1
 VERSION:=$(shell cat chart/Chart.yaml | yq .appVersion)
 HELM_CHART=$(APP_NAME)-$(VERSION).tgz
 

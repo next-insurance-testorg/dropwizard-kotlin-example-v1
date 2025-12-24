@@ -1,4 +1,4 @@
-package dropwizard.kotlin.example
+package com.github.ohbaron.dropwizardkotlinexamplev1
 
 import io.dropwizard.testing.ConfigOverride
 import io.dropwizard.testing.ResourceHelpers.resourceFilePath
@@ -33,7 +33,7 @@ class RootResourceTest {
         assertEquals(200, response.status.toLong())
         assertEquals("application/json", response.headers.getFirst("Content-Type"))
         val entity = response.readEntity(Map::class.java)
-        assertEquals("dropwizard-kotlin-example", entity["name"])
+        assertEquals("com.github.ohbaron.dropwizardkotlinexamplev1", entity["name"])
     }
 
     private fun client(): Client {

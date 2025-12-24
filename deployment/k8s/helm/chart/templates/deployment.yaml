@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "dropwizard-kotlin-example.fullname" . }}
+  name: {{ include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.fullname" . }}
   labels:
-    {{- include "dropwizard-kotlin-example.labels" . | nindent 4 }}
+    {{- include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "dropwizard-kotlin-example.selectorLabels" . | nindent 6 }}
+      {{- include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "dropwizard-kotlin-example.selectorLabels" . | nindent 8 }}
+        {{- include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "dropwizard-kotlin-example.serviceAccountName" . }}
+      serviceAccountName: {{ include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:

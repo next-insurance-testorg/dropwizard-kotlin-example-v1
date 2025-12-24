@@ -1,11 +1,11 @@
-# Default values for dropwizard-kotlin-example.
+# Default values for com.github.ohbaron.dropwizardkotlinexamplev1-v1.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: jecklgamis/dropwizard-kotlin-example
+  repository: ohbaron/com.github.ohbaron.dropwizardkotlinexamplev1-v1
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -48,7 +48,7 @@ ingress:
      kubernetes.io/ingress.class: "nginx"
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: dropwizard-kotlin-example.local
+    - host: com.github.ohbaron.dropwizardkotlinexamplev1-v1.local
       paths:
         - path: /
           pathType: Prefix

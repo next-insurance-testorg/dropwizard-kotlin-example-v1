@@ -1,4 +1,4 @@
-package dropwizard.kotlin.example
+package com.github.ohbaron.dropwizardkotlinexamplev1
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import io.dropwizard.core.Configuration

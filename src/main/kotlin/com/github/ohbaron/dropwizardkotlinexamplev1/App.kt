@@ -1,10 +1,10 @@
-package dropwizard.kotlin.example
+package com.github.ohbaron.dropwizardkotlinexamplev1
 
 import com.google.common.io.Resources
-import dropwizard.kotlin.example.filter.DiagnosticContextFilter
-import dropwizard.kotlin.example.healthcheck.DefaultHealthCheck
-import dropwizard.kotlin.example.resource.BuildInfoResource
-import dropwizard.kotlin.example.resource.RootResource
+import com.github.ohbaron.dropwizardkotlinexamplev1.filter.DiagnosticContextFilter
+import com.github.ohbaron.dropwizardkotlinexamplev1.healthcheck.DefaultHealthCheck
+import com.github.ohbaron.dropwizardkotlinexamplev1.resource.BuildInfoResource
+import com.github.ohbaron.dropwizardkotlinexamplev1.resource.RootResource
 import io.dropwizard.core.Application
 import io.dropwizard.core.setup.Environment
 

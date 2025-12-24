@@ -1,4 +1,4 @@
-package dropwizard.kotlin.example.filter
+package com.github.ohbaron.dropwizardkotlinexamplev1.filter
 
 import jakarta.ws.rs.container.ContainerRequestContext
 import jakarta.ws.rs.container.ContainerRequestFilter

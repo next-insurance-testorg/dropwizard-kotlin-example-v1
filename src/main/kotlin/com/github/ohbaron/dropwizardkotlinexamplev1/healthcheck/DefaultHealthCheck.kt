@@ -1,4 +1,4 @@
-package dropwizard.kotlin.example.healthcheck
+package com.github.ohbaron.dropwizardkotlinexamplev1.healthcheck
 
 
 import com.codahale.metrics.health.HealthCheck

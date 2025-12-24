@@ -1,4 +1,4 @@
-IMAGE_NAME:=dropwizard-kotlin-example
+IMAGE_NAME:=com.github.ohbaron.dropwizardkotlinexamplev1-v1
 IMAGE_TAG:=main
 
 default:

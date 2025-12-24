@@ -1,4 +1,4 @@
-appName: dropwizard-kotlin-example
+appName: com.github.ohbaron.dropwizardkotlinexamplev1
 
 server:
   requestLog:
@@ -22,9 +22,9 @@ logging:
   appenders:
     - type: console
     - type: file
-      currentLogFilename: logs/dropwizard-kotlin-example.log
+      currentLogFilename: logs/com.github.ohbaron.dropwizardkotlinexamplev1.log
       threshold: ALL
       archive: true
-      archivedLogFilenamePattern: logs/dropwizard-kotlin-example-%d.log.gz
+      archivedLogFilenamePattern: logs/com.github.ohbaron.dropwizardkotlinexamplev1-%d.log.gz
       archivedFileCount: 5
       timeZone: UTC

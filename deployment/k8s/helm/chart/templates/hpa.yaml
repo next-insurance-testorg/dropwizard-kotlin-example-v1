@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "dropwizard-kotlin-example.fullname" . }}
+  name: {{ include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.fullname" . }}
   labels:
-    {{- include "dropwizard-kotlin-example.labels" . | nindent 4 }}
+    {{- include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "dropwizard-kotlin-example.fullname" . }}
+    name: {{ include "com.github.ohbaron.dropwizardkotlinexamplev1-v1.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

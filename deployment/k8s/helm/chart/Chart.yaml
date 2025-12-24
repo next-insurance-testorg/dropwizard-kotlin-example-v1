@@ -1,5 +1,5 @@
 apiVersion: v2
-name: dropwizard-kotlin-example
+name: com.github.ohbaron.dropwizardkotlinexamplev1-v1
 description: An example Dropwizard app using Kotlin
 
 # A chart can be either an 'application' or a 'library' chart.

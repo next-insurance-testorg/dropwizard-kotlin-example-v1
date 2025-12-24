@@ -1,4 +1,4 @@
-package dropwizard.kotlin.example.resource
+package com.github.ohbaron.dropwizardkotlinexamplev1.resource
 
 import com.codahale.metrics.annotation.Timed
 import com.google.gson.JsonParser
