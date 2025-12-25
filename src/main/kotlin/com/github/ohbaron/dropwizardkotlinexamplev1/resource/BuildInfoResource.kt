@@ -21,6 +21,7 @@ class BuildInfoResource(private val buildInfoJson: String) {
         val versionElem = JsonParser.parseString(buildInfoJson).asJsonObject.get("version")
         val version = versionElem?.asString ?: ""
         Validate.notEmpty(version, "No version information found for the application")
+        Validate.notEmpty(version, "No version information found for the application")
 
         val cacheControl = CacheControl()
         cacheControl.isNoCache = true
